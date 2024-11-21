@@ -3,7 +3,6 @@
   import * as XLSX from 'xlsx';
 
   let { data }: { data: PageData } = $props();
-	import { goto } from "$app/navigation";
 	import { page } from "$app/stores";
 
   let id = $state("");
@@ -81,7 +80,7 @@
                 </div>
                 <div class="col-lg-6 col-md-12 col-12">
                   <div class="mb-3">
-                    <button class="btn btn-primary w-100" type="submit" onclick={() => goto(`/?id=${id}`)}>Kirim</button>
+                    <button class="btn btn-primary w-100" type="submit" onclick={() => window.location.href = `/?id=${id}`}>Kirim</button>
                   </div>
                 </div>
               </div>
