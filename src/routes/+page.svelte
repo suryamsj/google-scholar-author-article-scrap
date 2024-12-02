@@ -58,14 +58,14 @@
 					<div class="p-6">
 						<div class="flex items-center space-x-6">
 							<img
-								src={author?.image}
-								alt={author?.name}
+								src={author?.image ?? "/no-image.jpg"}
+								alt={author?.name ?? "Not Found"}
 								class="w-24 h-24 rounded-lg object-cover shadow-sm"
 							/>
 							<div>
-								<h3 class="text-xl font-medium text-gray-900">{author?.name}</h3>
-								<p class="mt-1">{author.information}</p>
-								<p class="text-gray-500 mt-1">{author.verified}</p>
+								<h3 class="text-xl font-medium text-gray-900">{author?.name ?? "Not Found"}</h3>
+								<p class="mt-1">{author.information ?? "Not Found"}</p>
+								<p class="text-gray-500 mt-1">{author.verified ?? "Not Found"}</p>
 							</div>
 						</div>
 					</div>
@@ -120,14 +120,14 @@
 													target="_blank"
 													rel="noopener noreferrer"
 												>
-													Lihat Publikasi
+													See Publication
 												</a>
 											</td>
 										</tr>
 									{:else}
 										<tr>
 											<td colspan="4" class="px-6 py-4 text-center text-sm text-gray-500">
-												Data artikel tidak ditemukan
+												Publication not found
 											</td>
 										</tr>
 									{/each}
